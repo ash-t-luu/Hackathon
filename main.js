@@ -75,7 +75,8 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=33.793036&longitude=-117.
         console.log(timeAndTemp);
 
         const temperatureContent = document.querySelector('h2');
-        temperatureContent.innerHTML = `Outside temperature is ${timeAndTemp[currentTime]} °F`;
+        temperatureContent.textContent = `Outside temperature is
+        ${timeAndTemp[currentTime]} °F`;
         document.querySelector('#container').appendChild(temperatureContent);
 
         console.log(weatherObj.daily.weathercode);
@@ -85,22 +86,24 @@ fetch('https://api.open-meteo.com/v1/forecast?latitude=33.793036&longitude=-117.
             0: "images/vector-sun-icon.jpg",
         }
 
+        // //functionality
+        // for (let key in weatherCodeObj) {
+        //     const image = document.createElement('img');
+        //     const imageDiv = document.createElement('div');
+        //     if (weatherObj.daily.weathercode === key) {
+        //         image.setAttribute('src', `${weatherCodeObj[key]}`);
+        //         image.setAttribute('id', 'sun');
+        //         document.querySelector('body').appendChild(imageDiv);
+        //         imageDiv.appendChild(image);
+        //     }
+        // }
 
-        //functionality
-        for (let key in weatherCodeObj) {
-            const image = document.createElement('img');
-            const imageDiv = document.createElement('div');
-            if (weatherObj.daily.weathercode === key) {
-                image.setAttribute('src', `${weatherCodeObj[key]}`);
-                image.setAttribute('id', 'sun');
-                document.querySelector('body').appendChild(imageDiv);
-                imageDiv.appendChild(image);
-            }
-        }
-
-
-
-
+        const image = document.createElement('img');
+        const imageDiv = document.createElement('div');
+        image.setAttribute('src', `${weatherCodeObj[0]}`);
+        image.setAttribute('id', 'sun');
+        document.querySelector('body').appendChild(imageDiv);
+        imageDiv.appendChild(image);
     })
     .catch((error) => {
         console.log(`Oh no! ${error}`);

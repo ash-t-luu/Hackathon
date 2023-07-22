@@ -2,6 +2,8 @@ body {
     margin: auto;
     width: 400px;
     height: 400px;
+    background-image: radial-gradient(#ffffff6f 50%, #1415178d 100%);
+    /* background: radial-gradient(#e66465, #9198e5); */
 }
 
 div {
@@ -22,6 +24,8 @@ div {
 h2 {
     font-family: monospace;
     font-size: 25px;
+    line-height: 35px;
+    color: black;
 }
 
 #sun {
