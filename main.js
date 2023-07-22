@@ -83,6 +83,17 @@ if (navigator.geolocation) {
                 //create obj - key would be the code, value the image src
                 const weatherCodeObj = {
                     0: "images/vector-sun-icon.jpg",
+                    1: "images/mainly_clear.jpeg",
+                    2: "images/mainly_clear.jpeg",
+                    3: "images/mainly_clear.jpeg",
+                    45: "images/fog.jpeg",
+                    48: "images/fog.jpeg",
+                    51: "images/drizzle.jpeg",
+                    53: "images/drizzle.jpeg",
+                    55: "images/drizzle.jpeg",
+
+
+                    
                 }
 
                 // //functionality
