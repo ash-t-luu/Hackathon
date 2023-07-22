@@ -2,7 +2,7 @@
     "name": "Weather Chrome Extension",
     "version": "1",
     "description": "latest weather update",
-    "manifest_version": 2,
+    "manifest_version": 3,
     "author": "Ashley & Christina",
     "permissions": [
         "geolocation"
