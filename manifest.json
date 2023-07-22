@@ -7,7 +7,7 @@
     "permissions": [
         "geolocation"
     ],
-    "browser_action": {
+    "action": {
         "default_popup": "index.html",
         "default_title": "Latest Weather Update"
     }
