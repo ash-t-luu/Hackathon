@@ -1,0 +1,30 @@
+body {
+    margin: auto;
+    width: 400px;
+    height: 400px;
+}
+
+div {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div1 {
+    height: 100px;
+}
+
+#container {
+    text-align: center;
+}
+
+h2 {
+    font-family: monospace;
+    font-size: 25px;
+}
+
+#sun {
+    width: 50px;
+    height: 50px;
+}
