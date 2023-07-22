@@ -76,6 +76,8 @@ if (navigator.geolocation) {
                 const temperatureContent = document.querySelector('h2');
                 temperatureContent.textContent = `Outside temperature is
         ${timeAndTemp[currentTime]} °F`;
+                // temperatureContent.innerHTML = `Today's Temperature
+                // ${timeAndTemp[currentTime]} °F`;
                 document.querySelector('#container').appendChild(temperatureContent);
 
                 console.log(weatherObj.daily.weathercode);
@@ -90,28 +92,29 @@ if (navigator.geolocation) {
                     48: "images/fog.jpeg",
                     51: "images/drizzle.jpeg",
                     53: "images/drizzle.jpeg",
-                    55: "images/drizzle.jpeg",
-
-
-                    
+                    55: "images/drizzle.jpeg",   
                 }
-
-                // //functionality
-                // for (let key in weatherCodeObj) {
-                //     const image = document.createElement('img');
-                //     const imageDiv = document.createElement('div');
-                //     if (weatherObj.daily.weathercode === key) {
-                //         image.setAttribute('src', `${weatherCodeObj[key]}`);
-                //         image.setAttribute('id', 'sun');
-                //         document.querySelector('body').appendChild(imageDiv);
-                //         imageDiv.appendChild(image);
-                //     }
-                // }
 
                 const image = document.createElement('img');
                 const imageDiv = document.createElement('div');
-                image.setAttribute('src', `${weatherCodeObj[0]}`);
-                image.setAttribute('id', 'sun');
+                let displayImage;
+
+                //functionality
+                for (let key in weatherCodeObj) {
+                    // console.log('hello');
+                    if (weatherObj.daily.weathercode == key) {
+                        displayImage = weatherCodeObj[key];
+                        console.log(displayImage);
+                        // image.setAttribute('id', 'sun');
+                        // document.querySelector('body').appendChild(imageDiv);
+                        // imageDiv.appendChild(image);
+                    }
+                }
+
+                // const image = document.createElement('img');
+                // const imageDiv = document.createElement('div');
+                image.setAttribute('src', displayImage);
+                image.setAttribute('id', 'img');
                 document.querySelector('body').appendChild(imageDiv);
                 imageDiv.appendChild(image);
             })
